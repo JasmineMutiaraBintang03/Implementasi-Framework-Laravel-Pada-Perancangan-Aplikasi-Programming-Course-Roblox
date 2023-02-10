@@ -1,0 +1,5 @@
+local part = game.Workspace.P2
+
+script.Parent.Touched:Connect(function(player) 
+	player.Parent.HumanoidRootPart.CFrame = part.CFrame
+end)
