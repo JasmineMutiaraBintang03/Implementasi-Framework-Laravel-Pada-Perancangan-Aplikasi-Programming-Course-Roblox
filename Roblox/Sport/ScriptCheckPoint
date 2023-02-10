@@ -1,0 +1,12 @@
+local checkpoints = game.Workspace:WaitForChild("Checkpoints"):GetChildren()
+
+--^ Returns a table (group of data) containing all of the stage blocks
+
+for i, checkpoint in pairs(checkpoints) do -- looping through each checkpoint block in that table
+	
+	-- Any code inside of here will repeat for each checkpoint
+	
+	checkpoint.TeamColor = game.Teams:FindFirstChild(checkpoint.Name)
+	checkpoint.BrickColor = game.Teams:FindFirstChild(checkpoint.Name)
+	
+end
