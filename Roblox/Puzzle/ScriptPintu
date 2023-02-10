@@ -1,0 +1,17 @@
+pintu = script.Parent
+function onChatted(msg, recipient, speaker) 
+	source = string.lower(msg) 
+	jawaban = script.Parent.Jawaban
+	if (source == string.lower(jawaban.Value)) then 
+		pintu.CanCollide = false 
+		pintu.Decal.Transparency=0.7
+		pintu.Transparency = 0.7 
+		wait(4) 
+		pintu.CanCollide = true 
+		pintu.Decal.Transparency = 0 
+		pintu.Transparency = 0
+	end 
+end 
+game.Players.ChildAdded:connect(function(plr)
+	plr.Chatted:connect(function(msg, recipient) onChatted(msg, recipient, plr) end) 
+end)
